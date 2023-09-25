@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Member</title>
+        <link rel="stylesheet" type="text/css" href="../static/class.css">
+    </head>
+    <body style="margin: 0px;">
+        <div style="display: flex;">
+            <div style="display: flex;justify-content: baseline;width: 50%;background-color: blue;">
+                <div>
+                    picture
+                </div>
+            </div>
+            <div style="display: flex;justify-content: end;width: 50%;background-color: red;">
+                <button type="button" style="border-radius: 15%;" onclick="logout()">
+                    Logout
+                </button>
+            </div>
+        </div>
+        <div style="display: flex;justify-content: center;">
+            <div style="font-size: 30px;">
+                Todo
+            </div>
+        </div>
+        <form action="/submit_task" id="submit_manager" method="POST">
+            <div style="display: flex;justify-content: center;background-color:aqua;">
+                <div class="member" style="display: grid; grid-template-columns: 2fr 1fr;">
+                    <div class="member_top_box">
+                        <div>
+                            title
+                        </div>
+                        <input type="text" name="title">
+                    </div>
+                
+                    <div class="member_top_box">
+                        <div>
+                            priority
+                        </div>
+                        <input type="text" name="priority">
+                    </div>
+                </div>
+                
+            </div>
+
+            <div style="display: flex; justify-content: center; background-color: aqua;">
+                <div class="member" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+                    <div class="member_top_box">
+                        <div>
+                            Status
+                        </div>
+                        <select name="status">
+                            <option value="Done">Done</option>
+                            <option value="Not Yet">Not Yet</option>
+                        </select>
+                    </div>
+                    <div class="member_top_box">
+                        <div>
+                            Start
+                        </div>
+                        <input type="text" name="start">
+                    </div>
+                    <div class="member_top_box">
+                        <div>
+                            Deadline
+                        </div>
+                        <input type="text" name="deadline">
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: flex; justify-content: center; background-color: aqua;">
+                <div class="member" style="display: grid; grid-template-columns: 1fr; width: 40.2%;">
+                    <div class="member_top_box">
+                        <div>
+                            Description
+                        </div>
+                        <input type="text" name="description" style="height: 50px;">
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: 10px;">
+                <div>
+                    <button type="button" onclick="check()">Create Task</button>
+                </div>
+            </div>
+            
+        </form>
+
+        <hr>
+        <div style="margin-top: 20px;">
+            <div style="display: flex; justify-content: center; align-content: center;">
+                <button type="button" class="member-mid-button">Today</button>
+                <button type="button" class="member-mid-button">Priority</button>
+                <button type="button" class="member-mid-button">Done</button>
+                <button type="button" class="member-mid-button">All</button>
+            </div>
+
+            <div style="display: flex; justify-content: center; align-content: center; margin-top: 20px;">
+                <div class="member-box">
+                    <div class="box">
+                        <div style="overflow: hidden;margin-top: 10px;">
+                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
+                        </div>
+                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                            <h2 class="task_title">Your task Title</h2>
+                            <div style="margin-top: 15px;">Description</div>
+                            <div class="description"></div>
+                        </div>
+                        <div style="display: flex;justify-content: end;align-items: center;margin-top: 10px;margin-bottom: 5px;">
+                            
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="start_time">start_time</div>
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="end_time">end_time</div>
+
+                            <div style="margin-right: 5px;">
+                                icon
+                            </div>
+                            <div style="margin-right: 5px;">
+                                delete
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div style="overflow: hidden;margin-top: 10px;">
+                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
+                        </div>
+                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                            <h2 class="task_title">Your task Title</h2>
+                            <div style="margin-top: 15px;">Description</div>
+                            <div class="description"></div>
+                        </div>
+                        <div style="display: flex;justify-content: end;align-items: center;margin-top: 10px;margin-bottom: 5px;">
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="start_time">start_time</div>
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="end_time">end_time</div>
+                            
+                            <div style="margin-right: 5px;">
+                                icon
+                            </div>
+                            <div style="margin-right: 5px;">
+                                delete
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div style="overflow: hidden;margin-top: 10px;">
+                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
+                        </div>
+                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                            <h2 class="task_title">Your task Title</h2>
+                            <div style="margin-top: 15px;">Description</div>
+                            <div class="description"></div>
+                        </div>
+                        <div style="display: flex;justify-content: end;align-items: center;margin-top: 10px; margin-bottom: 5px;">
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="start_time">start_time</div>
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="end_time">end_time</div>
+                            
+                            <div style="margin-right: 5px;">
+                                icon
+                            </div>
+                            <div style="margin-right: 5px;">
+                                delete
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div style="overflow: hidden;margin-top: 10px;">
+                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
+                        </div>
+                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                            <h2 class="task_title">Your task Title</h2>
+                            <div style="margin-top: 15px;">Description</div>
+                            <div class="description"></div>
+                        </div>
+                        <div style="display: flex;justify-content: end;align-items: center;margin-top: 10px;margin-bottom: 5px;">
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="start_time">start_time</div>
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="end_time">end_time</div>
+                            
+
+                            <div style="margin-right: 5px;">
+                                icon
+                            </div>
+                            <div style="margin-right: 5px;">
+                                delete
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div style="overflow: hidden;margin-top: 10px;">
+                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
+                        </div>
+                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                            <h2 class="task_title">Your task Title</h2>
+                            <div style="margin-top: 15px;">Description</div>
+                            <div class="description"></div>
+                        </div>
+                        <div style="display: flex;justify-content: end;align-items: center;margin-top: 10px; margin-bottom: 5px;">
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="start_time">start_time</div>
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="end_time">end_time</div>
+
+
+                            <div style="margin-right: 5px;">
+                                icon
+                            </div>
+                            <div style="margin-right: 5px;">
+                                delete
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div style="overflow: hidden;margin-top: 10px;">
+                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
+                        </div>
+                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                            <h2 class="task_title">Your task Title</h2>
+                            <div style="margin-top: 15px;">Description</div>
+                            <div class="description"></div>
+                        </div>
+                        <div style="display: flex;justify-content: end;align-items: center;margin-top: 10px; margin-bottom: 5px;">
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="start_time">start_time</div>
+                            <div style="margin-right: 15px; border: solid 1px; border-radius: 15%; font-size: 20px;" class="end_time">end_time</div>
+
+                            <div style="margin-right: 5px;">
+                                icon
+                            </div>
+                            <div style="margin-right: 5px;">
+                                delete
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            let level_list = document.getElementsByClassName("level");
+            let Status_list = document.getElementsByClassName("Status");
+            let task_title_list = document.getElementsByClassName("task_title");
+            let description_list = document.getElementsByClassName("description");
+            let start_time_list = document.getElementsByClassName("start_time");
+            let end_time_list = document.getElementsByClassName("end_time");
+
+            fetch('/log_task')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    for (let i=0; i<data.length; i++){
+                        level_list[i].textContent = data[i]["priority"];
+                        Status_list[i].textContent = data[i]["status"];
+                        task_title_list[i].textContent = data[i]["title"];
+                        description_list[i].textContent = data[i]["description"];
+                        start_time_list[i].textContent = data[i]["start"];
+                        end_time_list[i].textContent = data[i]["deadline"];
+
+                    }
+                });
+
+
+            function check(){
+                document.getElementById('submit_manager').submit();
+            }
+            function logout(){
+                window.location.href = '/';
+            }
+        </script>
+
+    </body>
+</html>

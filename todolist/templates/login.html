@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            login
+        </title>
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+        <link rel="stylesheet" type="text/css" href="../static/class.css">
+        <style>
+            input{
+                width: 200px;
+                height: 25px;
+                margin-bottom: 10px;
+            }
+            button{
+                width: 210px;
+                height: 25px;
+                margin-bottom: 10px;
+            }
+        </style>
+</head>
+    </head>
+    <body style="margin: 0px;">
+        <div class="login_screen">
+            <div class="login_box">
+                <img src="../static/login.png" style="max-width: 15vh; height: auto;">
+                    <div style="font-weight: bold;font-size: 30px;color: burlywood;">Login</div>
+                <div style="margin-bottom: 15px;">Sign in your account</div>
+                <form class="form" action="/login" method="POST" id="login_manager">
+                    <input type="text" id="username" name="username" placeholder="username">
+                    <input type="text" id="password" name="password" placeholder="password">
+                    <button type="button" onclick="check()">Login</button>
+                </form>
+                <div style="margin-bottom: 15px;">Forgot your password? Check here to reset</div>
+                <button type="button" onclick="window.location.href = '/register';">Register</button>
+            </div>
+        </div>
+
+        <script>
+            function check(){
+                let username = document.getElementById('username').value;
+                let account = document.getElementById('password').value;
+                if ((username == '') || (account == '')){
+                    alert('please enter completely');
+                }else{
+                    document.getElementById('login_manager').submit();
+                }
+            }
+        </script>
+        
+    </body>
+</html>

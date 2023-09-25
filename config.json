@@ -1,0 +1,9 @@
+{
+    "config" :{
+        "host":"localhost",
+        "user":"root",
+        "password":"Vincent1030",
+        "port":"5432",
+        "database":"todolist"
+    }
+}
