@@ -3,11 +3,11 @@
     align-items: center; 
     justify-content: center; 
     height: 100vh; 
-    background-color: red;
 }
 .login_box{
-    background-color: blue;
-    height: 55vh; 
+    background: linear-gradient(to right, #ffffff, #f0f0f0); /* 渐变背景 */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* 阴影效果 */
+    transition: box-shadow 0.3s ease; /* 添加过渡效果 */    height: 55vh; 
     width: 50vh; 
     display: flex; 
     flex-direction: column; 
@@ -18,7 +18,6 @@
     flex-direction: column; 
     align-items: center;
     justify-content: center;
-    background-color: red;
 }
 .member{
     display: grid;
@@ -28,7 +27,6 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-right: 5px;
-    background-color: aquamarine;
 }
 
 .member-mid-button{
@@ -41,7 +39,6 @@
     background-color: aqua;
 }
 .member-box{
-    background-color: blue;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -51,7 +48,8 @@
     height: 350px;
 }
 .box{
-    background-color: greenyellow; 
+    background: linear-gradient(to right, #5bc0de, #0073e6); /* 从左到右的渐变颜色 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
 }
 @media screen and (max-width: 900px){
     .member-box{

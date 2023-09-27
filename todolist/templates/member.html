@@ -5,25 +5,21 @@
         <link rel="stylesheet" type="text/css" href="../static/class.css">
     </head>
     <body style="margin: 0px;">
-        <div style="display: flex;">
-            <div style="display: flex;justify-content: baseline;width: 50%;background-color: blue;">
-                <div>
-                    picture
-                </div>
+        <div style="display: flex; background-color: #93bbf5;">
+            <div style="display: flex;justify-content: baseline;width: 50%; margin-left: 20px;">
+                <img src="../static/airplane.png" width="36" height="33" alt="Airplane">
             </div>
-            <div style="display: flex;justify-content: end;width: 50%;background-color: red;">
-                <button type="button" style="border-radius: 15%;" onclick="logout()">
-                    Logout
-                </button>
+            <div style="display: flex;justify-content: end;width: 50%;">
+                <img src="../static/user.png" width="36" height="33" alt="Logout" style="cursor: pointer; margin-right: 10px;" onclick="logout()">
             </div>
         </div>
-        <div style="display: flex;justify-content: center;">
+        <div style="display: flex;justify-content: center; background-color: #93bbf5;">
             <div style="font-size: 30px;">
                 Todo
             </div>
         </div>
         <form action="/submit_task" id="submit_manager" method="POST">
-            <div style="display: flex;justify-content: center;background-color:aqua;">
+            <div style="display: flex;justify-content: center;background-color: #93bbf5;">
                 <div class="member" style="display: grid; grid-template-columns: 2fr 1fr;">
                     <div class="member_top_box">
                         <div>
@@ -42,7 +38,7 @@
                 
             </div>
 
-            <div style="display: flex; justify-content: center; background-color: aqua;">
+            <div style="display: flex; justify-content: center;background-color: #93bbf5;">
                 <div class="member" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
                     <div class="member_top_box">
                         <div>
@@ -68,8 +64,8 @@
                 </div>
             </div>
             
-            <div style="display: flex; justify-content: center; background-color: aqua;">
-                <div class="member" style="display: grid; grid-template-columns: 1fr; width: 40.2%;">
+            <div style="display: flex; justify-content: center;background-color: #93bbf5;">
+                <div class="member" style="display: grid; grid-template-columns: 1fr; width: 40.2%;margin-bottom: 10px;">
                     <div class="member_top_box">
                         <div>
                             Description
@@ -80,7 +76,7 @@
             </div>
             <div style="display: flex; justify-content: center; margin-top: 10px;">
                 <div>
-                    <button type="button" onclick="check()">Create Task</button>
+                    <button type="button" style="border: none; background-color: #93bbf5;width: 160px; height: 40px; border-radius: 10%;cursor: pointer;" onclick="check()">Create Task</button>
                 </div>
             </div>
             
@@ -88,21 +84,21 @@
 
         <hr>
         <div style="margin-top: 20px;">
-            <div style="display: flex; justify-content: center; align-content: center;">
+            <!-- <div style="display: flex; justify-content: center; align-content: center;">
                 <button type="button" class="member-mid-button">Today</button>
                 <button type="button" class="member-mid-button">Priority</button>
                 <button type="button" class="member-mid-button">Done</button>
                 <button type="button" class="member-mid-button">All</button>
-            </div>
+            </div> -->
 
             <div style="display: flex; justify-content: center; align-content: center; margin-top: 20px;">
                 <div class="member-box">
                     <div class="box">
                         <div style="overflow: hidden;margin-top: 10px;">
-                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: left; margin-left: 20px; font-size: 30px;" class="level"><strong>Medium</strong>Medium</div>
                             <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
                         </div>
-                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                        <div style="margin: 5px;margin-top: 10px;">
                             <h2 class="task_title">Your task Title</h2>
                             <div style="margin-top: 15px;">Description</div>
                             <div class="description"></div>
@@ -122,10 +118,10 @@
                     </div>
                     <div class="box">
                         <div style="overflow: hidden;margin-top: 10px;">
-                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: left; margin-left: 20px; font-size: 30px;" class="level"><strong>Medium</strong>Medium</div>
                             <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
                         </div>
-                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                        <div style="margin: 5px;margin-top: 10px;">
                             <h2 class="task_title">Your task Title</h2>
                             <div style="margin-top: 15px;">Description</div>
                             <div class="description"></div>
@@ -144,10 +140,10 @@
                     </div>
                     <div class="box">
                         <div style="overflow: hidden;margin-top: 10px;">
-                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: left; margin-left: 20px; font-size: 30px;" class="level"><strong>Medium</strong>Medium</div>
                             <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
                         </div>
-                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                        <div style="margin: 5px;margin-top: 10px;">
                             <h2 class="task_title">Your task Title</h2>
                             <div style="margin-top: 15px;">Description</div>
                             <div class="description"></div>
@@ -166,10 +162,10 @@
                     </div>
                     <div class="box">
                         <div style="overflow: hidden;margin-top: 10px;">
-                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: left; margin-left: 20px; font-size: 30px;" class="level"><strong>Medium</strong>Medium</div>
                             <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
                         </div>
-                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                        <div style="margin: 5px;margin-top: 10px;">
                             <h2 class="task_title">Your task Title</h2>
                             <div style="margin-top: 15px;">Description</div>
                             <div class="description"></div>
@@ -189,10 +185,10 @@
                     </div>
                     <div class="box">
                         <div style="overflow: hidden;margin-top: 10px;">
-                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: left; margin-left: 20px; font-size: 30px;" class="level"><strong>Medium</strong>Medium</div>
                             <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
                         </div>
-                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                        <div style="margin: 5px;margin-top: 10px;">
                             <h2 class="task_title">Your task Title</h2>
                             <div style="margin-top: 15px;">Description</div>
                             <div class="description"></div>
@@ -212,10 +208,10 @@
                     </div>
                     <div class="box">
                         <div style="overflow: hidden;margin-top: 10px;">
-                            <div style="float: left; margin-left: 20px;" class="level">Medium</div>
+                            <div style="float: left; margin-left: 20px; font-size: 30px;" class="level"><strong>Medium</strong>Medium</div>
                             <div style="float: right; margin-right: 30px;" class="Status">Todo</div>
                         </div>
-                        <div style="margin: 5px;margin-top: 10px; background-color: red;">
+                        <div style="margin: 5px;margin-top: 10px;">
                             <h2 class="task_title">Your task Title</h2>
                             <div style="margin-top: 15px;">Description</div>
                             <div class="description"></div>
